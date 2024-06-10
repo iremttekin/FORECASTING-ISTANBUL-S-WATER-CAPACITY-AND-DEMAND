@@ -18,17 +18,17 @@ df |>
        title = "Seasonal plot: Istanbul's Water Demand")
 df |>
   gg_subseries(Demand, labels = "both") +
-  labs(y = "% (percent)",
-       title = "Istanbul's Dams Occupancy")
+  labs(y = "m3"",
+       title = "Istanbul's Water Demand" )
 df |>
   gg_lag(Demand, geom = "point") +
-  labs(x = "lag(Dam.Occupancy, k)")
+  labs(x = "lag(Demand, k)")
 df |>
   ACF(Demand) |>          #Autocorrelation function
-  autoplot() + labs(title="Istanbul's Dams Occupancy")
+  autoplot() + labs(title= "Istanbul's Water Demand")
 df |>
   PACF(Demand) |>        #Partial autocorrelation function
-  autoplot() + labs(title="Istanbul's Dams Occupancy")
+  autoplot() + labs(title="Istanbul's Water Demand")
 
 #Exponential Smoothing-----------------------
 fit <- dm_train |> 
