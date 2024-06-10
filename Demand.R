@@ -18,7 +18,7 @@ df |>
        title = "Seasonal plot: Istanbul's Water Demand")
 df |>
   gg_subseries(Demand, labels = "both") +
-  labs(y = "m3"",
+  labs(y = "m3",
        title = "Istanbul's Water Demand" )
 df |>
   gg_lag(Demand, geom = "point") +
